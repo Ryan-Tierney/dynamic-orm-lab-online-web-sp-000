@@ -50,8 +50,8 @@ class InteractiveRecord
     
     def save 
       sql = "INSERT #{table_name_for_insert} (#{col_names_for_insert}) VALUES (#{values_for_insert})"
-       DB.[:conn].execute(sql)
-       @id = DB
+       DB[:conn].execute(sql)
+       @id = DB[:conn].execute(sql)
     end 
     
     
