@@ -67,6 +67,8 @@ class InteractiveRecord
       sql = <<-SQL "SELECT * FROM #{self.table_name} 
       WHERE '#{attribute_key}' = '#{attribute_value}'"
       LIMIT 1 
+      SQL
+      
       DB[:conn].execute(sql)
     end 
    
