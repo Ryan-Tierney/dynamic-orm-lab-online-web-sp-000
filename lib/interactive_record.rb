@@ -63,6 +63,7 @@ class InteractiveRecord
     
     def self.find_by(attribute)
       attribute_key = attribute.keys.join()
+      attribute_value = attribute.value.first
       sql = "SELECT * FROM #{self.table_name} WHERE '#{col_name}' = '#{attribute}'"
       DB[:conn].execute(sql)
     end 
